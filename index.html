@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Golden Horizon Bank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script defer src="./js/login.js"></script>
+  </head>
+  <body>
+    <div id="modal" class="hidden absolute top-0 right-0 left-0 h-screen">
+      <div id="backdrop" class="h-full flex justify-center items-center">
+        <div class="bg-lime-500 p-8 rounded-xl">
+          <h4 id="modalText" class="text-2xl mb-4">
+            
+          </h4>
+          <button id="btn-close-modal" class="bg-yellow-200 px-6 py-2 font-medium rounded-md type="button">
+            Okay
+          </button>
+        </div>
+      </div>
+    </div>
+    <header>
+      <h1 id="primary-heading" class="text-5xl text-center mt-6">
+        Welcome to
+        <span class="font-semibold text-violet-600">Golden Horizon Bank</span>
+      </h1>
+    </header>
+    <main>
+      <!-- Login section -->
+      <section id="section-login" class="bg-blue-100 w-3/4 mx-auto mt-12 p-8">
+        <h3 class="text-3xl mb-4 font-medium">Please Login</h3>
+        <form class="login-form">
+          <input
+            class="block w-3/4 mb-3 p-2"
+            type="email"
+            name="email"
+            placeholder="Your email"
+          />
+          <input
+            class="block w-3/4 p-2 mb-3"
+            type="password"
+            name="password"
+            placeholder="Your password"
+          />
+          <button
+            class="bg-amber-600 px-8 py-2 rounded-md text-white font-medium hover:bg-amber-400"
+            type="submit"
+          >
+            Sumbit
+          </button>
+        </form>
+      </section>
+
+      <!-- Bank Interface -->
+
+      <section
+        id="section-bank"
+        class="hidden bg-blue-100 w-3/4 mx-auto mt-12 p-8"
+      >
+        <!-- Current account state -->
+        <div class="grid grid-cols-3 gap-4 text-white mb-16">
+          <div class="bg-green-400 p-4 rounded-xl">
+            <h4 class="text-2xl">Diposit</h4>
+            <p id="diposite-amount" class="text-4xl">$0</p>
+          </div>
+          <div class="bg-yellow-500 p-4 rounded-xl">
+            <h4 class="text-2xl">Withdraw</h4>
+            <p id="withdraw-amount" class="text-4xl">$120</p>
+          </div>
+          <div class="bg-violet-400 p-4 rounded-xl">
+            <h4 class="text-2xl">Balance</h4>
+            <p id="total-balance" class="text-4xl">$1200</p>
+          </div>
+        </div>
+
+        <!-- New state -->
+        <div class="grid grid-cols-2 gap-4 text-white mb-10">
+          <!-- New Diposit -->
+          <div class="bg-fuchsia-500 p-5 rounded-md">
+            <h5 class="text-2xl font-medium mb-4">Please diposit</h5>
+            <div class="pl-4">
+              <form id="form-diposit">
+                <input
+                  class="block w-3/4 mb-3 p-1 text-black"
+                  type="number"
+                  name="diposit"
+                  min="10"
+                  placeholder="$ amount you want to diposit"
+                />
+                <button
+                  class="bg-violet-500 px-3 py-2 rounded-md"
+                  type="submit"
+                >
+                  Diposit
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <!-- New withdraw -->
+          <div class="bg-indigo-300 p-5 rounded-md">
+            <h5 class="text-2xl font-medium mb-4">Please withdraw</h5>
+            <div class="pl-4">
+              <form id="form-withdraw">
+                <input
+                  class="block w-3/4 mb-3 p-1 text-black"
+                  type="number"
+                  name="diposit"
+                  min="10"
+                  placeholder="$ amount you want to withdraw"
+                />
+                <button
+                  class="bg-yellow-500 px-3 py-2 rounded-md"
+                  type="submit"
+                >
+                  Withdraw
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <button id="btn-logout" class="bg-amber-600 px-8 py-2 rounded-md text-white font-medium hover:bg-amber-400">Logout</button>
+      </section>
+    </main>
+  </body>
+</html>
